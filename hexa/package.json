@@ -1,0 +1,9 @@
+{
+  "name": "hexasecure-website",
+  "version": "1.0.0",
+  "description": "HexaSecure static website with a simple Node.js backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

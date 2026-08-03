@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HexaSecure | Request Service</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo" aria-label="HexaSecure home">
+        <span class="logo-mark"></span>
+        <span>HexaSecure</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="request.html">طلب خدمة</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Service Request</p>
+      <h1>طلب خدمة</h1>
+      <p>Send your service details and HexaSecure will review the request for a website, app, database, IT system, API, or security awareness support.</p>
+    </section>
+
+    <section class="section contact-layout">
+      <div class="contact-card glow-card">
+        <h2>Request Details</h2>
+        <form id="serviceRequestForm">
+          <label for="requestName">Name</label>
+          <input type="text" id="requestName" name="requestName" placeholder="Your name" required>
+
+          <label for="requestEmail">Email</label>
+          <input type="email" id="requestEmail" name="requestEmail" placeholder="your@email.com" required>
+
+          <label for="requestPhone">Phone</label>
+          <input type="tel" id="requestPhone" name="requestPhone" placeholder="Optional phone number">
+
+          <label for="requestService">Service Type</label>
+          <select id="requestService" name="requestService" required>
+            <option value="">Choose a service</option>
+            <option>Web Development</option>
+            <option>Desktop Application</option>
+            <option>Database Design</option>
+            <option>IT Support System</option>
+            <option>Network Devices Inventory</option>
+            <option>API Development</option>
+            <option>Cybersecurity Awareness</option>
+            <option>Software Consulting</option>
+          </select>
+
+          <label for="requestBudget">Budget Range</label>
+          <select id="requestBudget" name="requestBudget">
+            <option value="">Not decided yet</option>
+            <option>Student project</option>
+            <option>Small business</option>
+            <option>Startup MVP</option>
+            <option>Maintenance and support</option>
+          </select>
+
+          <label for="requestMessage">Project Description</label>
+          <textarea id="requestMessage" name="requestMessage" rows="5" placeholder="Explain what you need" required></textarea>
+
+          <button class="btn primary-btn form-btn" type="submit">Send Request</button>
+          <p id="requestMessageStatus" class="form-message" role="status"></p>
+        </form>
+      </div>
+
+      <aside class="contact-info">
+        <div class="mini-card">
+          <strong>Clear Request</strong>
+          <span>Share the service type, idea, and main problem.</span>
+        </div>
+        <div class="mini-card">
+          <strong>Project Review</strong>
+          <span>HexaSecure can plan the pages, database, API, or support workflow.</span>
+        </div>
+        <div class="mini-card">
+          <strong>Practical Delivery</strong>
+          <span>The focus stays on clean code, useful features, and secure habits.</span>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div><a href="index.html" class="footer-logo">HexaSecure</a><p>Code. Build. Secure. Solve.</p></div>
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="request.html">طلب خدمة</a><a href="admin.html">Admin</a><a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2026 HexaSecure. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

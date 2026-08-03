@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HexaSecure | Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo" aria-label="HexaSecure home">
+        <span class="logo-mark"></span>
+        <span>HexaSecure</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="request.html">طلب خدمة</a></li>
+        <li><a class="active" href="admin.html">Admin</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Admin Dashboard</p>
+      <h1>Requests & Messages</h1>
+      <p>Review contact messages and service requests received through the HexaSecure backend.</p>
+      <button id="logoutButton" class="btn secondary-btn admin-action" type="button">Logout</button>
+    </section>
+
+    <section class="section dashboard-section">
+      <div class="dashboard-stats">
+        <article class="mini-card">
+          <strong id="requestCount">0</strong>
+          <span>Service Requests</span>
+        </article>
+        <article class="mini-card">
+          <strong id="contactCount">0</strong>
+          <span>Contact Messages</span>
+        </article>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-panel glow-card">
+          <h2>Service Requests</h2>
+          <div id="serviceRequestsList" class="admin-list"></div>
+        </div>
+
+        <div class="dashboard-panel glow-card">
+          <h2>Contact Messages</h2>
+          <div id="contactsList" class="admin-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div><a href="index.html" class="footer-logo">HexaSecure</a><p>Code. Build. Secure. Solve.</p></div>
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="request.html">طلب خدمة</a><a href="admin.html">Admin</a><a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2026 HexaSecure. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
