@@ -8,5 +8,5 @@ window.PORTFOLIO_DATA = {
   },
   hexaSecure: { website: "", instagram: "https://www.instagram.com/hexasecure.eg/", tiktok: "https://www.tiktok.com/@hexasecure.eg?lang=en" },
   contact: { email: "ahmedhamedfawy@gmail.com" },
-  certificate: { image: "" }
+  certificate: { image: "./assets/hcia-security-certificate.jpg" }
 };
