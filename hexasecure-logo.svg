@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-labelledby="title desc">
+  <title id="title">HexaSecure</title>
+  <desc id="desc">Hexagonal H mark and HexaSecure wordmark</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#57f58a"/>
+      <stop offset="1" stop-color="#4cb7ff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M80 10 139 45v70l-59 35-59-35V45Z" fill="#071009" stroke="url(#g)" stroke-width="5"/>
+  <path d="M52 47v66M108 47v66M52 80h56" fill="none" stroke="#57f58a" stroke-width="13" stroke-linecap="square" filter="url(#glow)"/>
+  <text x="170" y="78" fill="#edf6f2" font-family="Arial, sans-serif" font-size="50" font-weight="800" letter-spacing="2">HEXA</text>
+  <text x="170" y="127" fill="#57f58a" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="8">SECURE</text>
+</svg>
