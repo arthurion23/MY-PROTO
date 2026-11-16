@@ -6,7 +6,7 @@ window.PORTFOLIO_DATA = {
     linkedin: "https://eg.linkedin.com/in/ahmed-hamed-740604397",
     achievement: "https://www.linkedin.com/feed/update/urn:li:activity:7527784386134573056/"
   },
-  hexaSecure: { website: "", instagram: "", tiktok: "" },
-  contact: { email: "" },
+  hexaSecure: { website: "", instagram: "https://www.instagram.com/hexasecure.eg/", tiktok: "https://www.tiktok.com/@hexasecure.eg?lang=en" },
+  contact: { email: "ahmedhamedfawy@gmail.com" },
   certificate: { image: "" }
 };
