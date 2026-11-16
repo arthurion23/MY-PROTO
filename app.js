@@ -3,8 +3,9 @@ const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 const escapeHtml = value => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
 
-window.addEventListener("load", () => setTimeout(() => $("#loader").classList.add("hidden"), 450));
-$("#year").textContent = new Date().getFullYear();
+window.addEventListener("load", () => setTimeout(() => $("#loader")?.classList.add("hidden"), 450));
+const year = $("#year");
+if (year) year.textContent = new Date().getFullYear();
 
 const menu = $("#nav-links");
 const toggle = $(".menu-toggle");
@@ -29,10 +30,10 @@ async function loadRepos(){ const state=$('#repo-state'), grid=$('#project-grid'
 loadRepos();
 
 if(DATA.certificate.image){ const preview=$('#certificate-preview'); preview.classList.remove('missing'); preview.innerHTML=`<img src="${escapeHtml(DATA.certificate.image)}" alt="Ahmed Hamed HCIA-Security certificate" loading="lazy"><button class="zoom-btn" id="zoom-certificate" type="button">＋</button>`; $('#certificate-modal img').src=DATA.certificate.image; $('#zoom-certificate').addEventListener('click',()=>$('#certificate-modal').showModal()); }
-$('#close-modal').addEventListener('click',()=>$('#certificate-modal').close());
+$('#close-modal')?.addEventListener('click',()=>$('#certificate-modal')?.close());
 
 const form=$('#contact-form'), status=$('#form-status');
-form.addEventListener('submit',e=>{e.preventDefault();let valid=true;$$('label',form).forEach(label=>{const field=$('input,textarea',label),error=$('small',label);error.textContent='';if(!field.checkValidity()){valid=false;error.textContent=field.validity.typeMismatch?'Enter a valid email address.':`Please enter at least ${field.minLength || 2} characters.`}});if(!valid){status.textContent='Please review the highlighted fields.';return}if(!DATA.contact.email){status.textContent='Message validated. Direct delivery is not configured yet—please connect through GitHub or LinkedIn.';return}const d=new FormData(form);location.href=`mailto:${DATA.contact.email}?subject=${encodeURIComponent(d.get('subject'))}&body=${encodeURIComponent(`From: ${d.get('name')} <${d.get('email')}>\n\n${d.get('message')}`)}`;status.textContent='Your email application was opened. Review and send the message there.'});
+if (form) form.addEventListener('submit',e=>{e.preventDefault();let valid=true;$('input,textarea',form).forEach(field=>{field.setAttribute('aria-invalid','false');if(!field.checkValidity()){valid=false;field.setAttribute('aria-invalid','true')}});const setStatus=message=>{if(status)status.textContent=message;else alert(message)};if(!valid){setStatus('Please complete all required fields with valid information.');return}if(!DATA.contact.email){setStatus('Direct delivery is not configured yet—please connect through GitHub or LinkedIn.');return}const d=new FormData(form);location.href=`mailto:${DATA.contact.email}?subject=${encodeURIComponent(d.get('subject')||'Portfolio contact')}&body=${encodeURIComponent(`From: ${d.get('name')} <${d.get('email')}>\n\n${d.get('message')}`)}`;setStatus('Your email application was opened. Review and send the message there.')});
 
 const back=$('#back-top');window.addEventListener('scroll',()=>back.classList.toggle('visible',scrollY>700),{passive:true});back.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 
