@@ -1,0 +1,7 @@
+{
+  "name": "ahmed-hamed-portfolio",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js"
+  }
+}
