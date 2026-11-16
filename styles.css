@@ -6,3 +6,20 @@
 .portrait-stage{min-height:650px;place-items:start center}.hero-portrait{position:relative;z-index:2;width:min(84%,430px);height:570px;margin:0 0 0 auto;border:1px solid #27434e;border-radius:18px;overflow:hidden;background:#05080b;box-shadow:0 40px 100px #000,0 0 70px rgba(87,245,138,.08)}.hero-portrait:before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,transparent 45%,rgba(4,8,11,.15) 72%,rgba(4,8,11,.92)),linear-gradient(90deg,rgba(76,183,255,.08),transparent 30%);pointer-events:none}.hero-portrait:after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(transparent 50%,rgba(0,0,0,.08) 50%);background-size:100% 4px;opacity:.45;pointer-events:none}.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:saturate(.82) contrast(1.06)}.hero-portrait figcaption{position:absolute;z-index:4;left:20px;right:20px;bottom:18px;display:flex;justify-content:space-between;align-items:center;font:.62rem monospace;letter-spacing:.1em}.hero-portrait figcaption span{color:var(--green)}.hero-portrait figcaption b{color:#c8d6d1}.portrait-terminal{position:absolute;z-index:5;left:-35px;bottom:4px;width:min(78%,390px);box-shadow:0 24px 70px #000,0 0 40px rgba(76,183,255,.1)}.portrait-terminal .terminal-body{height:230px;padding:17px 20px;font-size:.67rem;line-height:1.65}.portrait-terminal .terminal-foot{padding:9px 13px}.portrait-stage .signal-card{right:-12px;bottom:74px}.portrait-stage .orbit-a{width:560px;height:560px;top:10px}.portrait-stage .orbit-b{width:430px;height:430px;top:75px}
 @media(max-width:1020px){.portrait-stage{min-height:660px}.hero-portrait{margin:auto;width:min(78%,470px)}.portrait-terminal{left:4%;width:390px}.portrait-stage .signal-card{right:5%}}
 @media(max-width:680px){.portrait-stage{min-height:590px}.hero-portrait{width:88%;height:500px}.portrait-terminal{left:0;bottom:0;width:88%}.portrait-terminal .terminal-body{height:175px;font-size:.58rem;line-height:1.5}.portrait-terminal .terminal-body p:nth-child(n+8){display:none}.portrait-terminal .terminal-head small,.portrait-terminal .terminal-foot span:last-child{display:none}.portrait-stage .orbit-a{width:390px;height:390px}.portrait-stage .orbit-b{width:300px;height:300px}.portrait-stage .signal-card{display:none}}
+
+
+/* HexaSecure channels and direct contact */
+.hexa-logo img{width:min(100%,360px);height:auto;display:block;filter:drop-shadow(0 0 24px rgba(87,245,138,.14))}
+.hexa-social a{color:#a9b9b0;background:#09120c;border:1px solid #24442c;border-radius:7px;padding:11px 16px;transition:.25s}
+.hexa-social a:hover{color:#061009;background:var(--green);border-color:var(--green);transform:translateY(-2px)}
+.hexa-social a small{color:inherit;margin-left:9px}
+.contact-email-card{align-self:center;min-height:230px;background:linear-gradient(145deg,#0c171d,#071015);border:1px solid #27434d;border-radius:var(--radius);padding:34px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.3);transition:.3s}
+.contact-email-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-80px;top:-110px;background:var(--green);filter:blur(90px);opacity:.13}
+.contact-email-card:hover{transform:translateY(-5px);border-color:var(--green)}
+.contact-email-card .email-icon{width:58px;height:58px;border:1px solid #37614a;border-radius:12px;display:grid;place-items:center;color:var(--green);font:800 1.6rem monospace}
+.contact-email-card div{display:grid;min-width:0}
+.contact-email-card small{font:700 .62rem monospace;letter-spacing:.15em;color:var(--green)}
+.contact-email-card strong{font-size:clamp(1rem,2vw,1.35rem);margin-top:7px;overflow-wrap:anywhere}
+.contact-email-card p{color:var(--muted);margin:5px 0 0;font-size:.85rem}
+.contact-email-card>i{color:var(--green);font-size:1.4rem}
+@media(max-width:680px){.contact-email-card{grid-template-columns:auto 1fr;padding:24px 18px}.contact-email-card>i{display:none}.hexa-logo img{width:min(100%,310px)}}
